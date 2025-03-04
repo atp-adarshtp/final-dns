@@ -1,0 +1,121 @@
+/* General Card Styling */
+.card-container {
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 12px;
+    background: #f9f9f9;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Search Input Container */
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Search Input Styling */
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #1e3c72;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: #333;
+    margin-right: 150px;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(30, 60, 114, 0.6);
+    transform: scale(1.02);
+}
+
+/* DNS Zones Styling */
+.one-zones-container {
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Hover Effects */
+.one-zones-container:hover {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    transform: scale(1.03);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Soft Glow Effect */
+.one-zones-container::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.one-zones-container:hover::after {
+    opacity: 1;
+}
+
+/* Table Styling */
+.zones-container table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+/* Zones Container */
+.zones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Sticky Header with Search Bar */
+.sticky-header {
+    position: sticky;
+    top: 0px;
+    z-index: 1050; /* Keeps it above content */
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Search Input Adjustments */
+.sticky-header .search-input {
+    flex: 1; /* Takes up available space */
+    max-width: 300px; /* Adjust width as needed */
+    padding: 10px;
+    margin-top: -10px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: #333;
+}
+
