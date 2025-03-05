@@ -39,7 +39,7 @@ const Home = () => {
   const [newZoneName, setNewZoneName] = useState("");
 
   const API_TOKEN = import.meta.env.VITE_API_TOKEN;
-  const API_URL = "https://dns.enorde.com/api/v1";
+  const API_URL = "http://dns.enorde.com/api/v1";
 
   const debouncedZoneSearch = useDebounce(zoneSearch, 500);
   const debouncedRecordSearch = useDebounce(recordSearch, 500);
