@@ -56,7 +56,7 @@ app.use("/api/v1/zones", proxyMiddleware("/api/v1/zones"));
 
 // Default Route
 app.get("/", (req, res) => {
-  res.send("Hetzner API Proxy is running...");
+  res.send("Enorde API Proxy is running...");
 });
 
 // Start server
