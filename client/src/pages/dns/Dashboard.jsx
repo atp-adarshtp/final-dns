@@ -10,6 +10,7 @@ import "../../css/Records.css";
 
 const useDebounce = (value, delay) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
+  const axiosInstance = axios.create({baseURL:ProcessingInstruction.env.REACT_APP_API_URL})
 
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -46,7 +47,7 @@ const Home = () => {
   const fetchZones = async () => {
     setError(null);
     try {
-      const response = await axios.get(`${API_URL}/zones`, {
+      const response = await axiosInstance.get(`${API_URL}/zones`, {
         headers: { "Authorization": `Bearer ${API_TOKEN}` },
       });
       setZones(response.data.zones);
@@ -69,7 +70,7 @@ const Home = () => {
 
     const fetchRecords = async () => {
       try {
-        const response = await axios.get(`${API_URL}/records?zone_id=${zoneId}`, {
+        const response = await axiosInstance.get(`${API_URL}/records?zone_id=${zoneId}`, {
           headers: { "Authorization": `Bearer ${API_TOKEN}` },
         });
         setRecords(response.data.records);
